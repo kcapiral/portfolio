@@ -206,7 +206,7 @@ a:link, a:visited, a:active {
 
 /* iMac 2560x1400 */
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 1900px) {
 	.nav {
 		top: 0;
 		width: 100%;
