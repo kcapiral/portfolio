@@ -1,0 +1,94 @@
+body {
+  font-family: 'Heebo', sans-serif;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  transition: 0.5s;
+  -webkit-animation: background-color-change 12s infinite alternate;
+  -moz-animation: background-color-change 12s infinite alternate;
+  -o-animation: background-color-change 12s infinite alternate;
+  -ms-animation: background-color-change 12s infinite alternate;
+  animation: background-color-change 12s infinite alternate;
+}
+
+@-webkit-keyframes background-color-change {
+  0% { background-color: #1A06FE; }
+  25% { background-color: #FFADFE; }
+  50% { background-color: #F6D4D4; }
+  75% { background-color: #B570FA; }
+  100% { background-color: #79FEF0; }
+}
+@-moz-keyframes background-color-change {
+  0% { background-color: #1A06FE; }
+  25% { background-color: #FFADFE; }
+  50% { background-color: #F6D4D4; }
+  75% { background-color: #B570FA; }
+  100% { background-color: #79FEF0; }
+}
+@-ms-keyframes background-color-change {
+  0% { background-color: #1A06FE; }
+  25% { background-color: #FFADFE; }
+  50% { background-color: #F6D4D4; }
+  75% { background-color: #B570FA; }
+  100% { background-color: #79FEF0; }
+}
+@-o-keyframes background-color-change {
+  0% { background-color: #1A06FE; }
+  25% { background-color: #FFADFE; }
+  50% { background-color: #F6D4D4; }
+  75% { background-color: #B570FA; }
+  100% { background-color: #79FEF0; }
+}
+@keyframes background-color-change {
+  0% { background-color: #1A06FE; }
+  25% { background-color: #FFADFE; }
+  50% { background-color: #F6D4D4; }
+  75% { background-color: #B570FA; }
+  100% { background-color: #79FEF0; }
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  background-color: #79FEF0;
+  }
+}
