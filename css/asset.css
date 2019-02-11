@@ -2,7 +2,6 @@
 
 html, body {
 	width: 100%;
-	height: 100%;
 	margin: 0;
 	padding: 0;
   font-family: 'Heebo', sans-serif;
@@ -66,54 +65,6 @@ html, body {
   100% { color: #79FEF0; }
 }
 
-#wrapper {
-  /* width: 100%; */
-  margin: 16px;
-  /* background-color: blue; */
-}
-
-.section {
-  /* width: 100%;
-  height: 100%; */
-  /* background-color: yellow; */
-  font-size: 9em;
-  line-height: 72px;
-  word-wrap: break-word;
-}
-
-a:link, a:visited, a:active {
-  color: #707070;
-  text-decoration: none;
-  cursor: pointer;
-
-}
-
-a.title-1:hover {
-  color: #1A06FE;
-}
-
-a.title-2:hover {
-  color: #FFADFE;
-}
-
-a.title-3:hover {
-  color: #F6D4D4;
-}
-
-a.title-4:hover {
-  color: #B570FA;
-}
-
-a.title-5:hover {
-  color: #E1E2EA;
-}
-
-a.title-6:hover {
-  color: #79FEF0;
-}
-
-/* iMac 2560x1400 */
-
 @media only screen and (min-width: 768px) {
   .nav {
     height: 40px;
@@ -130,14 +81,10 @@ a.title-6:hover {
     left: 50%;
     transform: translate(-50%, -50%); */
   }
-
-  #wrapper {
-    margin-left: 120px;
-    margin-right: 120px;
-  }
-
-  .section {
-    font-size: 10vw;
-    line-height: 10vw;
-  }
 }
+
+.flex { display: flex }
+.flex.row { flex-direction: row }
+.flex.column { flex-direction: column }
+.justify-content-center { justify-content: center }
+.align-content-center { align-content: center }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/asset.css" rel="stylesheet" type="text/css">
+    <link href="css/overlay.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,900" rel="stylesheet">
+  </head>
+  <body>
+    <main class="flex column" style="height: 100vh;">
+      <div class="nav">
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&mdash;</a>
+          <div class="overlay-content">
+            <a href="#">Home</a>
+            <a href="asset.html">Assets</a>
+            <a href="proposal.html">Proposal</a>
+            <a href="#">Narrative</a>
+            <a href="#">Branding</a>
+            <a href="#">Portfolio</a>
+          </div>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="logo">kathleen capiral</span>
+      </div>
+      <section class="flex" style="flex-grow: 1; overflow: hidden;">
+        <div class="flex column justify-content-center" style="flex-grow: 1; font-size: 50px;">
+          <div id="project-link-container" class="flex column" style="flex-wrap: nowrap; position: absolute;">
+            <div id="matagora" data-image="./img/data-cup/data-cup-2.png" class="project-link">matagora</div>
+            <div id="zetacon" data-image="./img/zetacon/Zetacon - 1.png" class="project-link">zetacon</div>
+            <div id="playground" data-image="./img/data-cup/data-cup-4.png" class="project-link">playground</div>
+            <div id="saiko!" data-image="./img/data-cup/data-cup-1.png" class="project-link">saiko!</div>
+            <div id="data-cup" data-image="./img/data-cup/data-cup-2.png" class="project-link">data cup</div>
+            <div id="christian-shwartz" data-image="./img/christian-schwartz/christian-schwartz-folded-billboard-mockup.png" class="project-link" style="white-space: nowrap">christian shwartz</div>
+          </div>
+        </div>
+        <div id="dynamic-image" style="width: 75%; background-image: url('./img/data-cup/data-cup-1.png'); background-size: cover; background-position: center center;">
+        </div>
+      </section>
+    </main>
+
+
+
+
+
+
+    <script>
+      const changeDynamicImage = (event) => { 
+        const eventId = event.target.id;
+        let imageSrc = event.target.dataset.image;
+        document.getElementById("dynamic-image").style.backgroundImage = `url("${imageSrc}")`;
+      }
+
+      const projectLinks = document.getElementById("project-link-container");
+      projectLinks.addEventListener('mouseover', changeDynamicImage);
+
+
+      function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+      }
+    </script>
+  </body>
+</html>
